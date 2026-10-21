@@ -1,0 +1,885 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f1f7;
+    color: #302a35;
+}
+
+
+/* =========================
+   FOTO DE FUNDO
+========================= */
+
+.fundo {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("ft1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+.fundo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina {
+    width: min(1180px, 94%);
+    margin: 0 auto;
+    padding: 35px 0 60px;
+}
+
+
+/* =========================
+   ABERTURA
+========================= */
+
+.abertura {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.96),
+            rgba(242,232,248,0.95)
+        );
+
+    border: 1px solid rgba(125, 86, 145, 0.16);
+
+    border-radius: 30px;
+
+    padding: 60px 35px;
+
+    box-shadow:
+        0 20px 60px rgba(65, 40, 75, 0.12);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.abertura::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    background: rgba(153, 112, 175, 0.12);
+
+    top: -110px;
+    right: -70px;
+}
+
+.abertura::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(126, 85, 148, 0.18);
+
+    bottom: -80px;
+    left: -50px;
+}
+
+.abertura-conteudo {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.simbolo-grande {
+    font-size: 34px;
+    color: #80559a;
+    margin-bottom: 18px;
+}
+
+.mini-titulo,
+.etiqueta {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #80559a;
+}
+
+.abertura h1 {
+    margin: 18px 0;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 0.98;
+
+    font-weight: 500;
+
+    color: #33283a;
+}
+
+.abertura h1 span {
+    color: #80559a;
+}
+
+.texto-abertura {
+    max-width: 580px;
+
+    margin: 25px auto;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #665d6b;
+}
+
+.linha-detalhe {
+    width: 90px;
+    height: 2px;
+
+    margin: 25px auto;
+
+    background: #9b70b2;
+}
+
+.frase-surpresa {
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    color: #51415a;
+}
+
+
+/* =========================
+   BLOCOS
+========================= */
+
+.bloco {
+    margin-top: 25px;
+
+    background: rgba(255,255,255,0.96);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    border: 1px solid rgba(110, 73, 130, 0.12);
+
+    box-shadow:
+        0 12px 40px rgba(70, 45, 80, 0.08);
+}
+
+.cabecalho-bloco {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.numero {
+    min-width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eee3f3;
+
+    color: #80559a;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+.cabecalho-bloco h2 {
+    margin-top: 5px;
+
+    font-family: Georgia, serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color: #352b3b;
+}
+
+.descricao {
+    color: #706675;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   PERFIL
+========================= */
+
+.perfil-conteudo {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 14px;
+}
+
+.perfil-item {
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background: #f8f4fa;
+
+    border-left: 4px solid #9870aa;
+}
+
+.perfil-item span {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    color: #8b7c91;
+
+    text-transform: uppercase;
+
+    margin-bottom: 7px;
+}
+
+.perfil-item strong {
+    color: #49394f;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   CRONOGRAMA
+========================= */
+
+.legenda-cronograma {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+    padding: 15px 18px;
+
+    border-radius: 14px;
+
+    background: #faf7fb;
+}
+
+.legenda-cronograma span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    color: #655c69;
+}
+
+.bolinha {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+}
+
+.bolinha.hidratacao {
+    background: #9e7ab2;
+}
+
+.bolinha.nutricao {
+    background: #b78b68;
+}
+
+.bolinha.reconstrucao {
+    background: #72527f;
+}
+
+.bolinha.cuidado {
+    background: #c29bbf;
+}
+
+.cronograma {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.semana {
+    border: 1px solid #e6dce9;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #fff;
+}
+
+.semana-topo {
+    padding: 17px;
+
+    background: #eee3f3;
+
+    color: #51385c;
+}
+
+.semana-topo strong {
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+}
+
+.semana-topo span {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #816e87;
+}
+
+.semana-conteudo {
+    padding: 15px;
+}
+
+.tratamento {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee8f0;
+}
+
+.tratamento:last-child {
+    border-bottom: none;
+}
+
+.tratamento-dia {
+    width: 42px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #8a758f;
+}
+
+.tratamento-info strong {
+    display: block;
+
+    font-size: 13px;
+
+    color: #44364a;
+}
+
+.tratamento-info span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #8a818d;
+
+    margin-top: 3px;
+}
+
+
+/* =========================
+   DICAS
+========================= */
+
+.dicas-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.dica-card {
+    padding: 23px;
+
+    border-radius: 18px;
+
+    background: #f8f4fa;
+
+    border: 1px solid #ece2ef;
+
+    position: relative;
+}
+
+.dica-card::before {
+    content: "✦";
+
+    color: #9168a5;
+
+    font-size: 18px;
+
+    display: block;
+
+    margin-bottom: 12px;
+}
+
+.dica-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    color: #49364f;
+
+    margin-bottom: 9px;
+}
+
+.dica-card p {
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #716675;
+}
+
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.destaque {
+    margin-top: 25px;
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #765080,
+            #9a73aa
+        );
+
+    color: white;
+
+    box-shadow:
+        0 15px 45px rgba(95, 57, 110, 0.2);
+}
+
+.destaque-simbolo {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.destaque .etiqueta {
+    color: #eee2f2;
+}
+
+.destaque h2 {
+    max-width: 700px;
+
+    margin: 15px auto;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(28px, 4vw, 43px);
+
+    font-weight: 500;
+}
+
+.destaque p:last-child {
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #eee7f0;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.produto {
+    display: flex;
+
+    gap: 16px;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background: #faf7fb;
+
+    border: 1px solid #ebe1ef;
+}
+
+.produto-icone {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eee3f3;
+
+    color: #80559a;
+}
+
+.produto span {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: #90799a;
+}
+
+.produto h3 {
+    margin: 8px 0;
+
+    font-family: Georgia, serif;
+
+    font-weight: 500;
+
+    font-size: 17px;
+
+    color: #46364c;
+}
+
+.produto p {
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #766c79;
+}
+
+.em-breve {
+    margin-top: 18px;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border: 1px dashed #cdbbd4;
+
+    border-radius: 15px;
+
+    background: #fdfbfe;
+}
+
+.em-breve span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #80559a;
+}
+
+.em-breve p {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #837887;
+}
+
+
+/* =========================
+   CUIDADOS ESPECIAIS
+========================= */
+
+.cuidados-especiais {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.cuidado-card {
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background: #f8f4fa;
+
+    border-left: 3px solid #8e659f;
+}
+
+.cuidado-card strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    color: #4c3b52;
+}
+
+.cuidado-card p {
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #706675;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    margin-top: 25px;
+
+    padding: 10px 0;
+}
+
+.final-card {
+    text-align: center;
+
+    padding: 50px 35px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.97);
+
+    border: 1px solid #e5d9e9;
+}
+
+.final-card h2 {
+    max-width: 750px;
+
+    margin: 15px auto;
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #48364e;
+}
+
+.final-card p:last-child {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #746b78;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.acoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 25px;
+}
+
+.botao {
+    border: none;
+
+    padding: 16px 25px;
+
+    border-radius: 13px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.principal {
+    background: #80559a;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(100, 63, 120, 0.2);
+}
+
+.secundario {
+    background: white;
+
+    color: #60456a;
+
+    border: 1px solid #d9c8df;
+}
+
+.mensagem {
+    text-align: center;
+
+    margin-top: 15px;
+
+    color: #80559a;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .cronograma {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .dicas-grid,
+    .produtos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .pagina {
+        width: 92%;
+    }
+
+    .abertura {
+        min-height: 430px;
+
+        padding: 40px 22px;
+    }
+
+    .abertura h1 {
+        font-size: 45px;
+    }
+
+    .bloco {
+        padding: 24px 18px;
+    }
+
+    .cronograma,
+    .dicas-grid,
+    .produtos,
+    .cuidados-especiais {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+    .cabecalho-bloco h2 {
+        font-size: 24px;
+    }
+}

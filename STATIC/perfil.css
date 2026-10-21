@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    background: linear-gradient(135deg, #f7f1f7, #eef4ee);
+    color: #4d4650;
+    min-height: 100vh;
+}
+
+.pagina-perfil {
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.perfil {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO */
+
+.cabecalho-perfil {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cabecalho-perfil h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: #80658f;
+    margin-bottom: 8px;
+}
+
+.cabecalho-perfil p {
+    font-size: 16px;
+    color: #7b747d;
+}
+
+/* BLOCOS */
+
+.dados-usuario,
+.resultado-perfil {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #e6dce9;
+    border-radius: 20px;
+    padding: 28px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 25px rgba(100, 80, 110, 0.07);
+}
+
+.dados-usuario h2,
+.resultado-perfil h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: #769b7a;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dados-usuario p {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #5f5962;
+}
+
+.dados-usuario strong {
+    color: #80658f;
+}
+
+/* RESULTADO */
+
+#semResultado {
+    color: #8a838b;
+    font-size: 15px;
+}
+
+#resultadoQuiz {
+    margin-top: 15px;
+    line-height: 1.7;
+    color: #5f5962;
+    white-space: pre-wrap;
+}
+
+/* BOTÕES */
+
+.acoes-perfil {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.acoes-perfil button {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 20px;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background: #80658f;
+    color: white;
+}
+
+.acoes-perfil button:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+#voltarCabelos {
+    background: #a8bfa8;
+}
+
+#sairConta {
+    background: #d6aebd;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .pagina-perfil {
+        padding: 35px 15px;
+    }
+
+    .cabecalho-perfil h1 {
+        font-size: 34px;
+    }
+
+    .dados-usuario,
+    .resultado-perfil {
+        padding: 22px;
+    }
+
+    .acoes-perfil {
+        flex-direction: column;
+    }
+
+    .acoes-perfil button {
+        width: 100%;
+    }
+}

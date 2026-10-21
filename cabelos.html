@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados com os Cabelos | Glow Up</title>
+
+    <link rel="stylesheet" href="/cabelos.css">
+</head>
+
+<body>
+
+<main class="pagina">
+
+    <!-- PERFIL -->
+    <button type="button" id="botaoPerfil" class="botao-perfil" aria-label="Abrir meu perfil">
+        👤
+    </button>
+
+    <div id="painelPerfil" class="painel-perfil">
+
+        <div class="cabecalho-painel">
+            <h2>Meu perfil</h2>
+
+            <button type="button" id="fecharPerfil" class="fechar-perfil">
+                ×
+            </button>
+        </div>
+
+        <button type="button" class="opcao-perfil" id="meusDados">
+            Meus dados
+        </button>
+
+
+        <button type="button" class="opcao-perfil" id="meuResultado">
+            Meu resultado
+        </button>
+
+        <button type="button" class="opcao-perfil" id="sairConta">
+            Sair da conta
+        </button>
+
+    </div>
+
+
+    <section class="conteudo">
+
+       <!-- BARRA DE PESQUISA -->
+<div class="pesquisa-cabelos">
+    <input 
+        type="text" 
+        id="campoPesquisaCabelos"
+        placeholder="Pesquisar produto, marca ou finalidade..."
+    >
+
+    <button 
+        type="button" 
+        id="botaoPesquisaCabelos"
+        aria-label="Pesquisar">
+        🔍
+    </button>
+</div>
+
+
+        <!-- CARROSSEL -->
+        <div class="carrossel-cabelos">
+
+            <div class="slide ativo">
+                <img src="/foto1.jpeg" alt="Cuidados com os cabelos">
+            </div>
+
+            <div class="slide">
+                <img src="/foto2.jpeg" alt="Cabelo saudável">
+            </div>
+
+            <div class="slide">
+                <img src="/foto3.jpeg" alt="Rotina de cuidados com o cabelo">
+            </div>
+
+            <div class="slide">
+                <img src="/foto4.jpeg" alt="Cuidados capilares">
+            </div>
+
+            <div class="slide">
+                <img src="/foto5.jpeg" alt="Diferentes tipos de cabelo">
+            </div>
+
+            <div class="slide">
+                <img src="/foto6.jpeg" alt="Autocuidado com os cabelos">
+            </div>
+
+            <div class="slide">
+                <img src="/foto7.jpeg" alt="Autocuidado com os cabelos">
+            </div>
+
+        </div>
+
+
+        <!-- TÍTULO -->
+        <div class="titulo-cabelos">
+
+            <div class="simbolo">✦</div>
+
+            <h1>Cuidados com os cabelos</h1>
+
+
+            <!-- DICAS -->
+            <section class="dicas">
+
+                <div class="dica">
+                    <h2>✨ Cuide com carinho</h2>
+
+                    <p>
+                        Reserve um momento para cuidar dos seus cabelos.
+                        Uma rotina simples e constante pode fazer diferença
+                        na aparência e no bem-estar dos fios.
+                    </p>
+                </div>
+
+
+                <div class="dica">
+                    <h2>🌿 Tenha uma rotina</h2>
+
+                    <p>
+                        Procure manter hábitos de cuidado que façam sentido
+                        para você. Evite exageros e dê atenção aos produtos
+                        que fazem parte da sua rotina.
+                    </p>
+                </div>
+
+
+                <div class="dica">
+                    <h2>💫 Valorize seu cabelo</h2>
+
+                    <p>
+                        Cada pessoa possui características diferentes.
+                        Conhecer melhor seus cabelos é um passo importante
+                        para escolher cuidados mais adequados.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- CHAMADA PARA O QUIZ -->
+            <div class="chamada">
+
+                <p>
+                    Quer descobrir quais cuidados combinam melhor com você?
+                </p>
+
+                <button 
+    type="button" 
+    id="abrirCadastroQuiz">
+    Fazer meu quiz capilar
+</button>
+
+
+                <button 
+                    type="button" 
+                    class="botao-menu" 
+                    onclick="window.location.href='/'">
+                    Voltar para o menu
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- MODAL DE CADASTRO DO QUIZ -->
+
+<div id="modalCadastroQuiz" class="modal-cadastro">
+
+    <div class="fundo-modal"></div>
+
+    <div class="caixa-cadastro">
+
+        <button type="button" id="fecharCadastroQuiz" class="fechar-modal">
+            ×
+        </button>
+
+        <h2>Antes de começar ♡</h2>
+
+        <p>
+            Crie sua conta para fazer seu quiz capilar
+            e salvar seu resultado no seu perfil.
+        </p>
+
+        <form id="formCadastroQuiz">
+
+            <label for="nomeQuiz">Nome</label>
+            <input
+                type="text"
+                id="nomeQuiz"
+                placeholder="Seu nome completo"
+                required
+            >
+
+            <label for="emailQuiz">E-mail</label>
+            <input
+                type="email"
+                id="emailQuiz"
+                placeholder="seuemail@email.com"
+                required
+            >
+
+            <label for="senhaQuiz">Senha</label>
+            <input
+                type="password"
+                id="senhaQuiz"
+                placeholder="Crie uma senha"
+                required
+            >
+
+            <button type="submit" class="botao-cadastro-quiz">
+                Criar minha conta
+            </button>
+
+        </form>
+
+        <p id="mensagemCadastroQuiz"></p>
+
+        <button
+            type="button"
+            id="irParaLoginQuiz"
+            class="botao-login-quiz">
+            Já tenho uma conta
+        </button>
+
+    </div>
+
+</div>
+
+<script src="/cabelos.js"></script>
+
+</body>
+</html>

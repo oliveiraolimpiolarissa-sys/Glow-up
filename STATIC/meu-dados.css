@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: "DM Sans", Arial, sans-serif;
+    background: #f8f4f8;
+    color: #5e5662;
+}
+
+.pagina-dados {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.card-dados {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(80, 60, 90, 0.10);
+}
+
+.card-dados h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: "Playfair Display", Georgia, serif;
+    color: #80658f;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.informacoes {
+    background: #f7f3f8;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.informacoes p {
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #e7dfe9;
+}
+
+.informacoes p:last-child {
+    border-bottom: none;
+}
+
+.informacoes strong {
+    color: #80658f;
+}
+
+.card-dados button {
+    margin-top: 25px;
+    border: none;
+    border-radius: 12px;
+    background: #80658f;
+    color: white;
+    padding: 12px 20px;
+    font-family: "DM Sans", Arial, sans-serif;
+    cursor: pointer;
+}
+
+.card-dados button:hover {
+    background: #70547f;
+}

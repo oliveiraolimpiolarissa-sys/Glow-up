@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro | Glow Up</title>
+
+    <link rel="stylesheet" href="/cadastro.css">
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <div class="cadastro-card">
+
+            <h1>Crie sua conta</h1>
+
+            <p class="subtitulo">
+                Cadastre-se para personalizar sua experiência no Glow Up.
+            </p>
+
+            <form id="formCadastro">
+
+                <label for="nome">Nome e sobrenome</label>
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome completo"
+                    required
+                >
+
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Crie uma senha"
+                    required
+                >
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+            </form>
+
+            <p id="mensagem"></p>
+
+            <p class="login-link">
+                Já possui uma conta?
+                <a href="login.html">Entrar</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="/cadastro.js"></script>
+</body>
+</html>

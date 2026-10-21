@@ -1,0 +1,581 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CONFIGURAÇÃO GERAL
+   ===================================================== */
+
+body{
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    background-color: #c5bfab;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.background{
+    width: 100%;
+    flex: 1;
+
+    padding: 25px 20px 35px;
+}
+
+.content{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   BANNER PRINCIPAL
+   ===================================================== */
+
+.hero{
+    width: 100%;
+    text-align: center;
+}
+
+.main-img{
+    width: 100%;
+    max-width: 1200px;
+
+    border-radius: 35px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+    /*
+       A imagem continua sendo a mesma.
+       Apenas limitamos um pouco a altura visual
+       para o restante do Home aparecer melhor.
+    */
+    max-height: auto;
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   APRESENTAÇÃO
+   ===================================================== */
+
+.intro{
+    text-align: center;
+
+    padding: 18px 20px 20px;
+}
+
+
+/* detalhe acima do título */
+
+.decorative-line{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-bottom: 6px;
+}
+
+.decorative-line span{
+    width: 38px;
+    height: 1px;
+
+    background: #b595d8;
+}
+
+.decorative-line i{
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid #b595d8;
+
+    transform: rotate(45deg);
+}
+
+
+/* título principal */
+
+.intro h1{
+    font-family: 'Playfair Display', Georgia, serif;
+
+    font-size: 38px;
+    font-weight: 600;
+
+    color: #6d5d54;
+
+    margin: 4px 0 7px;
+}
+
+
+/* pequena linha abaixo do título */
+
+.intro h1::after{
+    content: "";
+
+    display: block;
+
+    width: 110px;
+    height: 3px;
+
+    background: linear-gradient(
+        to right,
+        #b595d8,
+        #e9a7b7,
+        #aab59b
+    );
+
+    margin: 9px auto;
+
+    border-radius: 10px;
+}
+
+
+/* frase principal */
+
+.intro .subtitle{
+    font-family: 'Playfair Display', Georgia, serif;
+
+    font-size: 19px;
+    font-style: italic;
+
+    color: #8a7098;
+
+    margin: 0 auto 7px;
+}
+
+
+/* texto explicativo */
+
+.intro-text{
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    color: #666;
+}
+
+
+/* =====================================================
+   CARDS DAS CATEGORIAS
+   ===================================================== */
+
+.categories{
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    max-width: 760px;
+
+    margin: 5px auto 30px;
+
+    padding: 0 5px;
+}
+
+
+/* card */
+
+.category-card{
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background: rgba(255,255,255,0.90);
+
+    border-radius: 22px;
+
+    padding: 21px 20px 19px;
+
+    min-height: 215px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #6d5d54;
+
+    box-shadow: 0 8px 23px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* impede que o navegador deixe o link azul */
+
+.category-card:link,
+.category-card:visited{
+    color: #6d5d54;
+
+    text-decoration: none;
+}
+
+
+/* efeito ao passar o mouse */
+
+.category-card:hover{
+    transform: translateY(-5px);
+
+    box-shadow: 0 13px 28px rgba(0,0,0,0.12);
+}
+
+
+/* =====================================================
+   SÍMBOLO DOS CARDS
+   ===================================================== */
+
+.card-symbol{
+    position: relative;
+
+    z-index: 2;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #b595d8;
+
+    border-radius: 50%;
+
+    color: #8a7098;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   TÍTULO DOS CARDS
+   ===================================================== */
+
+.category-card h2{
+    position: relative;
+
+    z-index: 2;
+
+    font-family: 'Playfair Display', Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    color: #6d5d54;
+
+    margin: 0 0 7px;
+}
+
+
+/* =====================================================
+   TEXTO DOS CARDS
+   ===================================================== */
+
+.category-card p{
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 270px;
+
+    font-family: 'DM Sans', Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #666;
+
+    margin: 0 0 11px;
+}
+
+
+/* =====================================================
+   LINK "EXPLORAR ÁREA"
+   ===================================================== */
+
+.card-link{
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: auto;
+
+    font-family: 'DM Sans', Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #8a7098;
+}
+
+.category-card:link .card-link,
+.category-card:visited .card-link{
+    color: #8a7098;
+}
+
+.card-link strong{
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+.category-card:hover .card-link strong{
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   ELEMENTOS DECORATIVOS DOS CARDS
+   ===================================================== */
+
+.card-decoration{
+    position: absolute;
+
+    width: 85px;
+    height: 85px;
+
+    top: -32px;
+    right: -32px;
+
+    border-radius: 50%;
+
+    background: rgba(181,149,216,0.12);
+}
+
+
+/* detalhe inferior esquerdo */
+
+.category-card::before{
+    content: "";
+
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    left: -20px;
+    bottom: -20px;
+
+    border-radius: 50%;
+
+    background: rgba(170,181,155,0.14);
+}
+
+
+/* pequeno detalhe geométrico */
+
+.category-card::after{
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    left: 22px;
+    top: 22px;
+
+    border: 1px solid rgba(181,149,216,0.5);
+
+    transform: rotate(45deg);
+}
+
+
+/* =====================================================
+   FRASE FINAL
+   ===================================================== */
+
+.final-message{
+    text-align: center;
+
+    padding: 3px 20px 25px;
+}
+
+.final-message h2{
+    font-family: 'Playfair Display', Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    color: #6d5d54;
+
+    margin: 9px 0 5px;
+}
+
+.final-message p{
+    font-size: 13px;
+
+    letter-spacing: 0.8px;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   DETALHE DA FRASE FINAL
+   ===================================================== */
+
+.final-decoration{
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.final-decoration span{
+    width: 42px;
+    height: 1px;
+
+    background: #b595d8;
+}
+
+.final-decoration i{
+    width: 6px;
+    height: 6px;
+
+    border: 1px solid #b595d8;
+
+    transform: rotate(45deg);
+}
+
+
+/* =====================================================
+   RODAPÉ
+   ===================================================== */
+
+footer{
+    width: 100%;
+
+    background: #b595d8;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 12px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-top: auto;
+}
+
+footer span{
+    color: #9f7ec3;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media(max-width: 900px){
+
+    .main-img{
+        max-height: 350px;
+    }
+
+    .categories{
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        gap: 15px;
+    }
+
+    .category-card{
+        min-height: 190px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media(max-width: 768px){
+
+    .background{
+        padding: 18px 15px 25px;
+    }
+
+    .main-img{
+        max-height: 280px;
+
+        border-radius: 20px;
+    }
+
+    .intro{
+        padding: 16px 10px 18px;
+    }
+
+    .intro h1{
+        font-size: 31px;
+    }
+
+    .intro .subtitle{
+        font-size: 18px;
+    }
+
+    .intro-text{
+        font-size: 14px;
+    }
+
+    .category-card{
+        padding: 20px 18px;
+
+        min-height: 185px;
+    }
+
+    .final-message h2{
+        font-size: 25px;
+    }
+
+    footer{
+        padding: 11px;
+
+        font-size: 14px;
+    }
+}
